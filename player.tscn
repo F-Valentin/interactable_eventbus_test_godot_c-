@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://by4b01cispwqp"]
+
+[ext_resource type="Script" uid="uid://cgp3kms1pwkkv" path="res://Player.cs" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://bhjymqxdaboci" path="res://icon.svg" id="2_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03h1j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27qvu"]
+
+[node name="Player" type="CharacterBody2D" unique_id=872879298]
+collision_mask = 2
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=523572591]
+shape = SubResource("RectangleShape2D_03h1j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=118438521]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_onrkg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1420181742]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1551086025]
+shape = SubResource("RectangleShape2D_27qvu")
+
+[connection signal="area_entered" from="Area2D" to="." method="OnAreaEntered"]
+[connection signal="area_exited" from="Area2D" to="." method="OnAreaExited"]
