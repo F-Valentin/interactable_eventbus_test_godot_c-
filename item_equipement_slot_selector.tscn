@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b1qohixtvd3a7"]
+
+[ext_resource type="Script" uid="uid://ccpsy1qhd7p6i" path="res://ItemEquipementSlotSelector.cs" id="1_6wn1q"]
+
+[node name="SlotSelector" type="Panel" unique_id=126981458]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6wn1q")
+
+[node name="right" type="Button" parent="." unique_id=924674335]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "right slot"
+
+[node name="left" type="Button" parent="." unique_id=383578209]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "left slot"
+
+[node name="up" type="Button" parent="." unique_id=544669695]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "up slot"
+
+[node name="down" type="Button" parent="." unique_id=2051477676]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "down slot"

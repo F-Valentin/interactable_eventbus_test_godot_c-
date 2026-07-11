@@ -1,9 +1,19 @@
 using Godot;
 
-public interface Interactor
+public interface IActor;
+// Narrow capability interfaces — implement only what your actor actually supports
+public interface IInventoryHolder : IActor
 {
-    public Item Item { get; }
-    public bool CanInteract { get; }
+    Inventory Inventory { get; }
+}
 
-    public void OnItemEntered(Item item);
+public interface ICarryCapable : IActor
+{
+    Node2D CarryAnchor { get; }
+    // StateMachine StateMachine { get; }
+}
+
+public interface IEquipmentHolder : IActor
+{
+    // EquipmentSlots EquipmentSlots { get; }
 }

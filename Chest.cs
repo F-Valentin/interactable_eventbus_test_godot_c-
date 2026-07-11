@@ -1,10 +1,8 @@
 using Godot;
 using System;
 
-namespace Entity;
-public partial class Enemy : Area2D, IInteractable
+public partial class Chest : Area2D, IInteractable
 {
-	[Export]
 	public bool IsInteractable { get; private set; } = true;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -19,16 +17,10 @@ public partial class Enemy : Area2D, IInteractable
 	public InteractionCommand? Interact()
 	{
 		if (!IsInteractable)
-			return null;
-
-		GD.Print("interact");
+			return null;	
+		
 		IsInteractable = false;
 
-		// Tween tween = CreateTween().SetParallel(true);
-
-		// tween.SetEase(Tween.EaseType.In);
-		// tween.TweenProperty(this, "rotation_degrees", 360.0, 1.5);
-
-		return new TargetInfoCommand(Name);
-	}	
+		return new PickUpItemCommand("sword");
+	}
 }

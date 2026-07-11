@@ -1,37 +1,31 @@
-using Contrats;
-using Entity;
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public partial class Player : CharacterBody2D
 {
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -400.0f;
 
-	private Area2D? _target = null;
-
+	private List<Area2D?> _targets = [];
 
     public override void _Ready()
 	{
-		EventBus.ItemPickUp += SayHello;
 	}
 
     public override void _UnhandledKeyInput(InputEvent @event)
 	{
-		GD.Print($"{@event.AsText()}");
-
 		if (@event.IsActionPressed("interact"))
 		{
-			GD.Print("Interact input");
-			switch (_target)
+			foreach (var target in _targets)
 			{
-				case null: break;
-				case IInteractable interactable: interactable.Interact(); break;
-				default: break;
+				if (target is IInteractable interactable)
+				{
+					interactable?.Interact()?.Apply(this);	
+				}
 			}
-			
-
 		}
+
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -66,11 +60,6 @@ public partial class Player : CharacterBody2D
 		MoveAndSlide();
 	}
 
-	public void SayHello()
-	{
-		GD.Print("Say hello");
-	}
-
 	public void OnAreaEntered(Area2D area)
 	{
 		// if (area is IInteractable interactable)
@@ -79,7 +68,7 @@ public partial class Player : CharacterBody2D
 		// 	return;
 		// }
 
-		_target = area;
+		_targets.Add(area);
 		// works the same way as the code snippet above 
 		// (area as IInteractable)?.Interact();
 		GD.Print($"Name: {area.Name} entered.");
@@ -87,13 +76,11 @@ public partial class Player : CharacterBody2D
 
 	public void OnAreaExited(Area2D area)
 	{
-		_target = null;
-
+		_targets.Remove(area);
 		GD.Print($"Name: {area.Name} exited.");
 	}
 
     public override void _ExitTree()
 	{
-		EventBus.ItemPickUp -= SayHello;
 	}
 }

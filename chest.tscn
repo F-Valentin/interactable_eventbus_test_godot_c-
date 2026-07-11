@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dndk7ri2bhbm4"]
+
+[ext_resource type="Script" uid="uid://bcmweatcabcsr" path="res://Chest.cs" id="1_8uwsg"]
+[ext_resource type="Texture2D" uid="uid://bhjymqxdaboci" path="res://icon.svg" id="1_twpm2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7q0g7"]
+
+[node name="Chest" type="Area2D" unique_id=1515435811]
+modulate = Color(1, 0.14901961, 0.5176471, 1)
+collision_layer = 4
+script = ExtResource("1_8uwsg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1133963793]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_twpm2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=365516654]
+shape = SubResource("RectangleShape2D_7q0g7")
