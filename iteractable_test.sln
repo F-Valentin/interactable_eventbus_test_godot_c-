@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iteractable_test", "iteractable_test.csproj", "{A95436B0-870C-47E0-BA85-EC72FF42A1EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iteractable_test", "iteractable_test.csproj", "{D166269B-2C12-4AD0-8F80-3E07C7E80606}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A95436B0-870C-47E0-BA85-EC72FF42A1EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A95436B0-870C-47E0-BA85-EC72FF42A1EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A95436B0-870C-47E0-BA85-EC72FF42A1EB}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{A95436B0-870C-47E0-BA85-EC72FF42A1EB}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{A95436B0-870C-47E0-BA85-EC72FF42A1EB}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{A95436B0-870C-47E0-BA85-EC72FF42A1EB}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{D166269B-2C12-4AD0-8F80-3E07C7E80606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D166269B-2C12-4AD0-8F80-3E07C7E80606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D166269B-2C12-4AD0-8F80-3E07C7E80606}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{D166269B-2C12-4AD0-8F80-3E07C7E80606}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{D166269B-2C12-4AD0-8F80-3E07C7E80606}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{D166269B-2C12-4AD0-8F80-3E07C7E80606}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dinnxh4iwe6sq"]
+
+[ext_resource type="Script" uid="uid://7mwfea86f3y8" path="res://scenes/DragGhost.cs" id="1_cptpy"]
+
+[node name="DragGhost" type="CanvasLayer" unique_id=765116385]
+layer = 10
+script = ExtResource("1_cptpy")
+
+[node name="DragIcon" type="TextureRect" parent="." unique_id=45180445]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2

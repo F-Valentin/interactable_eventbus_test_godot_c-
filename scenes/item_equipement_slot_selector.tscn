@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b1qohixtvd3a7"]
 
-[ext_resource type="Script" uid="uid://ccpsy1qhd7p6i" path="res://ItemEquipementSlotSelector.cs" id="1_6wn1q"]
+[ext_resource type="Script" uid="uid://ccpsy1qhd7p6i" path="res://scripts/ItemEquipementSlotSelector.cs" id="1_6wn1q"]
 
 [node name="SlotSelector" type="Panel" unique_id=126981458]
 offset_right = 40.0

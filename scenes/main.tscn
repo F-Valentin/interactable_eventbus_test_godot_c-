@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://6i0di872rq0k"]
+
+[ext_resource type="Script" uid="uid://slr0sumr2mp4" path="res://scripts/Main.cs" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dsfqipwkx304g" path="res://scenes/player_ui.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://b4vxbik40rjvv" path="res://scenes/inventory_grid.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://dinnxh4iwe6sq" path="res://scenes/drag_ghost.tscn" id="4_jyhfs"]
+
+[node name="Main" type="Node2D" unique_id=594308896]
+script = ExtResource("1_o5qli")
+
+[node name="PlayerUi" parent="." unique_id=1008878494 instance=ExtResource("2_0wfyh")]
+
+[node name="InventoryGrid" parent="." unique_id=1415405858 instance=ExtResource("3_sugp2")]
+
+[node name="DragGhost" parent="." unique_id=765116385 instance=ExtResource("4_jyhfs")]

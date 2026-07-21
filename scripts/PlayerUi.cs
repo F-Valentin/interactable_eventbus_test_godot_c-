@@ -7,10 +7,10 @@ public partial class PlayerUi : Control
 	public Player? player = null;	
 
 	// Called when the node enters the scene tree for the first time.
-	private Label? _slot1;
+	private TextureRect? _slot1;
 	public override void _Ready()
 	{
-		// _slot1 = GetNode<Label>("Slot1");
+		_slot1 = GetNode<TextureRect>("Slot1");
 		// var mat = _slot1.Material as ShaderMaterial;
 
 		// mat.SetShaderParameter()
@@ -23,15 +23,15 @@ public partial class PlayerUi : Control
 	{
 	}
 
-	private void OnInventorySlotSelected(string slot_name)
+	private void OnInventorySlotSelected(string slotType)
 	{
 		GD.Print("player ui");
-		GD.Print(slot_name);
 
 		// act on the player real slot
-		switch (slot_name)
+		switch (slotType)
 		{
-			case "up": break; 
+			case "WeaponSlot": _slot1?.GetChild<ReferenceRect>(0).Show(); break; 
+			case "ConsumableSlot": break; 
 			default: break;
 		}
 	}	
