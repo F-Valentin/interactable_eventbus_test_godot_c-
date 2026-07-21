@@ -59,7 +59,7 @@ public partial class ItemSlot : PanelContainer
         {
             GD.PushError(
                 $"the parameter quantity (value: {quantity}) must not be greater ",
-                $"than the itemData max stack size (value: {itemData.MaxStackSize}) ",
+                $"than the itemData (id: {itemData.id}) max stack size (value: {itemData.MaxStackSize}) ",
                 "fallback to the default value (1)."
             );
         }

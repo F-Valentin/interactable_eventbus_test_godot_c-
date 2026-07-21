@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c8nccmroha3tu"]
+
+[ext_resource type="Texture2D" uid="uid://dneh5set5k3kg" path="res://assets/key.png" id="1_mmg8x"]
+[ext_resource type="Script" uid="uid://db2iav6xy1qp7" path="res://resources/ItemData.cs" id="2_iqg4b"]
+
+[resource]
+script = ExtResource("2_iqg4b")
+id = &"key"
+DisplayName = "key"
+Description = "a key to open chest"
+Icon = ExtResource("1_mmg8x")
+ItemCategory = 2
+metadata/_custom_type_script = "uid://db2iav6xy1qp7"

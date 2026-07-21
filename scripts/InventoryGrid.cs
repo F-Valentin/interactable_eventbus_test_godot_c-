@@ -41,15 +41,19 @@ public partial class InventoryGrid : PanelContainer
 
         var slot_zero = _slotGrid?.GetChild<ItemSlot>(0);
         var slot_one = _slotGrid?.GetChild<ItemSlot>(1);
+        var slot_two = _slotGrid?.GetChild<ItemSlot>(2);
         var itemDataBase = ItemDataBase.Instance;
 
         ItemData? bomb = itemDataBase.GetItemData("bomb");
+        ItemData? key = itemDataBase.GetItemData("key");
 
-        if (bomb == null)
+        if (bomb == null || key == null)
             return;
             
         slot_zero?.SetItemData(bomb, 7);
         slot_one?.SetItemData(bomb, 5);
+        slot_two?.SetItemData(key, 1);
+        
     }
 
     public void OnMouseExited()

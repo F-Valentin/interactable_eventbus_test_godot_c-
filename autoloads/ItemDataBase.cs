@@ -7,6 +7,7 @@ public partial class ItemDataBase : Node
     
     private string[] _ItemsPath = [
         "resources/bomb.tres",
+        "resources/key.tres",
     ];
 
     private Dictionary<StringName, ItemData> _lookup = [];

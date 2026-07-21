@@ -60,6 +60,11 @@ public partial class InventoryManager : Node
 
         int space = target.ItemData.MaxStackSize - target.Quantity;
 
+        /* 
+            We don't really need the condition “HeldQuantity == HeldItemData.MaxStackSize” here,
+            because without it, a swap would occur, but I want to make sure that the only option
+            is to stack; that's why I added this condition. 
+        */
         if (HeldQuantity == HeldItemData.MaxStackSize || space <= 0)
             return 0;
 
